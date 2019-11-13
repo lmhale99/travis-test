@@ -8,8 +8,8 @@ lammps_command                  lmp_mpi
 mpi_command                     
 
 # Potential definition and directory containing associated files
-potential_file                  1986--Foiles-S-M--Ag--LAMMPS--ipr1.json
-potential_dir                   1986--Foiles-S-M--Ag--LAMMPS--ipr1
+potential_file                  ../example/1986--Foiles-S-M--Ag--LAMMPS--ipr1.json
+potential_dir                   ../example/1986--Foiles-S-M--Ag--LAMMPS--ipr1
 
 # Units for input/output values
 length_unit                     

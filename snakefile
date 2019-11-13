@@ -1,4 +1,4 @@
-rule atommantest:
+rule calc_diatom_scan:
     input:
         "calc_diatom_scan.in"
     output:
@@ -6,4 +6,10 @@ rule atommantest:
     conda:
         "envs/calc_diatom_scan.yaml"
     shell:
-        "cd script/; python calc_diatom_scan.py calc_diatom_scan.in"
+        """
+        cp -r scripts/ rundir/
+        cp {input} rundir/
+        cd rundir/
+        python calc_diatom_scan.py {input}
+        cp {output} ../.
+        """
