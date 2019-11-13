@@ -1,1 +1,15 @@
+# Compiled python modules
+*.pyc
+
+# Virtual Studio Code cache
 .vscode/
+
+# snakemake cache
+.snakemake/
+
+# Execution folder
+rundir
+
+# Specific input/output files
+calc_diatom_scan.in
+results.json
