@@ -9,5 +9,5 @@ install:
   - bash miniconda.sh -b -p $HOME/miniconda
   - conda install -y -c conda-forge -c bioconda python=${PYTHONVER} snakemake
 script:
-  - cp -r example/* scripts/.
+  - cp example/calc_diatom_scan.in .
   - snakemake --use-conda
