@@ -1,6 +1,7 @@
+name: calc_diatom_scan
 channels:
 - conda-forge
 dependencies:
 - python=3.7.3
 - atomman=1.3.0
-#- lammps=2019.06.05
+- lammps=2019.06.05

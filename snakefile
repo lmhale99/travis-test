@@ -1,9 +1,9 @@
 rule atommantest:
     input:
-        "input.json"
+        "calc_diatom_scan.in"
     output:
-        "system.json"
+        "results.json"
     conda:
-        "envs/test.yaml"
-    script:
-        "testing.py"
+        "envs/calc_diatom_scan.yaml"
+    shell:
+        "cd script/; python calc_diatom_scan.py calc_diatom_scan.in"

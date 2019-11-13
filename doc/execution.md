@@ -1,19 +1,29 @@
 # Executing the calculation
 
-## Option #1: Using snakemake
+1. Install Anaconda or Miniconda 3 if needed.
 
-The necessary requirements for running the calculation can be automatically installed using snakemake
+## Option #1: Use snakemake
 
-Blah, blah
+2. Install snakemake if needed
 
-    snakemake --use-conda
+        conda install -c conda-forge -c bioconda snakemake
+
+3. Fill in the the calc_{name}.in file in the scripts directory.
+
+4. Execute the snakemake file from the calculation's root directory
+
+        snakemake --use-conda
 
 ## Option #2: Manual installation
 
-1. Install Anaconda or Miniconda 3.
-2. (Optional) Create a new conda environment for this calculation.  This is optional but recommended as it helps with package version verification.
-3. The .yaml file(s) in the envs/ directory specify the conda package requirements for the calculation.
-4. Run the calculation using
+2. Create a new conda environment for this calculation, and activate it.  This is optional but recommended as it helps with package version verification.
 
-        cd scripts
+        conda env create -f envs/calc_{name}.yaml
+        source activate calc_{name}
+
+3. Fill in the the calc_{name}.in file in the scripts directory.
+
+3. Run the calculation directly from within the scripts/ directory
+
+        cd scripts/
         python calc_{name}.py calc_{name}.in
